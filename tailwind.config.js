@@ -1,8 +1,17 @@
 module.exports = {
-  purge: { content: ['./public/**/*.html', './src/**/*.vue'] },
+  purge: {
+    enabled: true,
+    content: ['./public/**/*.html', './src/**/*.vue']
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        'pokemonmd': '500px',
+        'pokemon': '350px',
+
+      },
+    },
   },
   variants: {
     extend: {},

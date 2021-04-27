@@ -19,7 +19,11 @@
         :pokemonImage="pokemon.sprites.front_default"
       />
     </div> -->
-    <div v-for="pokemon in pokemonInfo" :key="pokemon.id">
+    <div
+      v-for="pokemon in pokemonInfo"
+      :key="pokemon.id"
+      class="w-full h-auto flex flex-col justify-center"
+    >
       <Pokemon
         v-if="render"
         :pokemon="pokemon.name"
