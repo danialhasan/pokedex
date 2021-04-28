@@ -6,7 +6,7 @@
       alt="This is an image of {{pokemon}}"
     />
     <div class="w-full flex flex-col justify-center flex-grow">
-      <h1>{{ pokemon }}</h1>
+      <h1>{{ pokemonId }}. {{ pokemon }}</h1>
       <h1>{{ pokemonInfo }}</h1>
     </div>
   </div>
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "Pokemon",
+  name: "PokemonChild",
   props: {
     pokemon: {
       type: String,
@@ -27,6 +27,10 @@ export default {
     pokemonInfo: {
       type: String,
       default: "No Pokemon Description Given",
+    },
+    pokemonId: {
+      type: Number,
+      default: 0,
     },
   },
 };

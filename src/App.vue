@@ -1,10 +1,13 @@
 <template>
   <h1 class="text-center text-4xl font-bold">PokeDex</h1>
-  <Pokedex />
+  <h1 class="text-center">Pokemon Index</h1>
+
+  <PokedexParent />
+  
 </template>
 
 <script>
-import Pokedex from "./components/Pokedex";
+import PokedexParent from "./components/PokedexParent";
 
 /**
  * TODO
@@ -15,7 +18,7 @@ import Pokedex from "./components/Pokedex";
 export default {
   name: "App",
   components: {
-    Pokedex,
+    PokedexParent,
   },
 };
 </script>
