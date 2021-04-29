@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    enabled: false,
+    enabled: true,
     content: ['./public/**/*.html', './src/**/*.vue']
   },
   darkMode: false, // or 'media' or 'class'
@@ -9,8 +9,10 @@ module.exports = {
       width: {
         'pokemonmd': '500px',
         'pokemon': '350px',
-
       },
+      transitionProperty: {
+        'height': 'height'
+      }
     },
   },
   variants: {
