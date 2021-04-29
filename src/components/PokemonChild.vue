@@ -1,4 +1,7 @@
 <template>
+  <!-- 
+  TODO: Add duplicate failsafe functionality to 'load more' button. 
+ -->
   <!--
   To make the switch between expanded/compressed easier, I will make the classes for each 
   state and put them in their own "expanded"/"compressed" classes to add and remove with javascript. 
