@@ -14,6 +14,9 @@
         :pokemonWeight="pokemon.weight"
         :pokemonHeight="pokemon.height"
         :pokemonType="pokemon.type"
+        :pokemonAttack="pokemon.attack"
+        :pokemonDefence="pokemon.defence"
+        :pokemonSpeed="pokemon.speed"
       />
     </div>
     <button
@@ -85,6 +88,16 @@ export default {
           type: data.types[0].type.name,
           weight: data.weight,
           height: data.height,
+          hitpoints: data.stats[0].base_stat,
+          attack: data.stats[1].base_stat,
+          defence: data.stats[2].base_stat,
+          speed: data.stats[5].base_stat,
+          /**
+           * Need:
+           * - CP
+           * - Special Attacks
+           * - Weaknesses
+           */
         };
 
         this.pokemonInfo.push(singlePokemonInfo);

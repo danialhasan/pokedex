@@ -18,6 +18,9 @@
         <li>Type: {{ pokemonType }}</li>
         <li>Weight: {{ pokemonWeight }} hectograms</li>
         <li>Height: {{ pokemonHeight }} decimeters</li>
+        <li>Attack: {{ pokemonAttack }} [unit]</li>
+        <li>Defence: {{ pokemonDefence }} [unit]</li>
+        <li>Speed: {{ pokemonSpeed }} [unit]</li>
       </ul>
     </div>
   </div>
@@ -55,6 +58,39 @@ export default {
       type: String,
       default: "Type Not Found",
     },
+    pokemonHp: {
+      type: Number,
+      default: 0,
+    },
+    pokemonCp: {
+      type: Number,
+      default: 0,
+    },
+    pokemonAttack: {
+      type: Number,
+      default: 0,
+    },
+    pokemonDefence: {
+      type: Number,
+      default: 0,
+    },
+    pokemonSpeed: {
+      type: Number,
+      default: 0,
+    },
+    pokemonWeaknesses: {
+      type: Array,
+      default: () => [],
+    },
+    /**
+     * Need:
+     * - HP
+     * - CP
+     * - Attack
+     * - Defence
+     * - Special Attacks
+     * - Weaknesses
+     */
   },
   data() {
     return {
