@@ -11,8 +11,8 @@
         :pokemonImage="pokemon.image"
         :pokemonInfo="pokemon.description"
         :pokemonId="pokemon.id"
-        :pokemonWeight="pokemon.weight"
-        :pokemonHeight="pokemon.height"
+        :pokemonWeight="pokemon.weight / 10"
+        :pokemonHeight="pokemon.height / 10"
         :pokemonType="pokemon.type"
         :pokemonAttack="pokemon.attack"
         :pokemonDefence="pokemon.defence"
@@ -82,16 +82,16 @@ export default {
 
         let singlePokemonInfo = {
           id: data.id,
-          name: data.name,
+          name: data.name, // TODO: Capitalize first letter of word.
           image: data.sprites.front_default,
           description: description.flavor_text_entries[0].flavor_text,
           type: data.types[0].type.name,
-          weight: data.weight,
-          height: data.height,
+          weight: data.weight, // TODO: Convert to kilograms.
+          height: data.height, // TODO: Convert to meters.
           hitpoints: data.stats[0].base_stat,
           attack: data.stats[1].base_stat,
           defence: data.stats[2].base_stat,
-          speed: data.stats[5].base_stat,
+          speed: data.stats[5].base_stat, // TODO: Convert to km/h.
           /**
            * Need:
            * - CP
